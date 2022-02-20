@@ -5,7 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">Shopping list :</header>
-      <Form />
+      <div className="content">
+        <Form />
+      </div>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
       </footer>
