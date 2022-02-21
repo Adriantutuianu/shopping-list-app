@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Shopping list :</header>
+      <header className="app-header">Shopping list :</header>
       <div className="content">
         <Form
           inputText={inputText}
