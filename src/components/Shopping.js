@@ -20,7 +20,19 @@ const Shopping = ({ text, shop, shopping, setShopping }) => {
     );
   };
 
-  return <div>Shopping</div>;
+  return (
+    <div className="shop">
+      <li className={`shop-item ${shop.completed ? "completed" : ""}`}>
+        {text}
+      </li>
+      <button onClick={completeHandler} className="complete-btn">
+        <i className="fas fa-check"></i>
+      </button>
+      <button onClick={deleteHandler} className="trash-btn">
+        <i className="fas fa-trash"></i>
+      </button>
+    </div>
+  );
 };
 
 export default Shopping;
