@@ -8,6 +8,24 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [shopping, setShopping] = useState([]);
   const [status, setStatus] = useState("all");
+  const [filteredShopping, setFilteredShopping] = useState([]);
+
+  //functions and events
+  const filterHandler = () => {
+    switch (status) {
+      case "completed":
+        setFilteredShopping(shopping.filter((shop) => shop.completed === true));
+        break;
+      case "uncompleted":
+        setFilteredShopping(
+          shopping.filter((shop) => shop.completed === false)
+        );
+
+        break;
+      default:
+        setFilteredShopping(shopping);
+    }
+  };
 
   return (
     <div className="App">
