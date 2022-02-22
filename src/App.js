@@ -13,6 +13,7 @@ function App() {
   //useEffect
   useEffect(() => {
     filterHandler();
+    saveLocalShopping();
   }, [shopping, status]);
 
   //functions and events
@@ -30,6 +31,12 @@ function App() {
       default:
         setFilteredShopping(shopping);
     }
+  };
+
+  //save to local storage
+
+  const saveLocalShopping = () => {
+    localStorage.setItem("shopping", JSON.stringify(shopping));
   };
 
   return (
