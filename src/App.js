@@ -10,6 +10,11 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredShopping, setFilteredShopping] = useState([]);
 
+  //run once when the app start
+  useEffect(() => {
+    getLocalShopping();
+  }, []);
+
   //useEffect
   useEffect(() => {
     filterHandler();
@@ -37,6 +42,16 @@ function App() {
 
   const saveLocalShopping = () => {
     localStorage.setItem("shopping", JSON.stringify(shopping));
+  };
+
+  const getLocalShopping = () => {
+    if (localStorage.getItem("shopping") === null) {
+      localStorage.setItem("shopping", JSON.stringify([]));
+    } else {
+      let shopLocal = JSON.parse(localStorage.getItem("shopping"));
+
+      setShopping(shopLocal);
+    }
   };
 
   return (
