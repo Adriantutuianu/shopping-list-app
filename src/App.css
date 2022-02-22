@@ -60,6 +60,9 @@ form button:hover {
 .content {
   min-height: 80vh;
   height: 100%;
+}
+
+.shopping-container {
   display: flex;
   justify-content: center;
   align-items: center;
