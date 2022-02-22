@@ -1,7 +1,7 @@
 import { useState } from "react";
-
 import "./App.css";
 import Form from "./components/Form";
+import ShoppingList from "./components/ShoppingList";
 
 function App() {
   //state
@@ -38,6 +38,7 @@ function App() {
           setInputText={setInputText}
           setStatus={setStatus}
         />
+        <ShoppingList />
       </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
