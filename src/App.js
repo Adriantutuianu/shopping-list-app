@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
@@ -9,6 +9,11 @@ function App() {
   const [shopping, setShopping] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredShopping, setFilteredShopping] = useState([]);
+
+  //useEffect
+  useEffect(() => {
+    filterHandler();
+  }, [shopping, status]);
 
   //functions and events
   const filterHandler = () => {
@@ -38,7 +43,11 @@ function App() {
           setInputText={setInputText}
           setStatus={setStatus}
         />
-        <ShoppingList />
+        <ShoppingList
+          filteredShopping={filteredShopping}
+          setShopping={setShopping}
+          shopping={shopping}
+        />
       </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
