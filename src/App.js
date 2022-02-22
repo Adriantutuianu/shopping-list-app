@@ -7,18 +7,20 @@ function App() {
   //state
   const [inputText, setInputText] = useState("");
   const [shopping, setShopping] = useState([]);
+  const [status, setStatus] = useState("all");
 
   return (
     <div className="App">
       <header className="app-header">Shopping list :</header>
-      <div className="content">
+      <main className="content">
         <Form
           inputText={inputText}
           shopping={shopping}
           setShopping={setShopping}
           setInputText={setInputText}
+          setStatus={setStatus}
         />
-      </div>
+      </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
       </footer>
