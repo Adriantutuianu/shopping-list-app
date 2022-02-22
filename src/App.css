@@ -40,14 +40,15 @@ form {
   justify-content: center;
   align-items: center;
 }
-
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
+  border: none;
+  background: white;
 }
 form button {
-  color: rgb(160, 207, 30);
+  color: #ff6f47;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
