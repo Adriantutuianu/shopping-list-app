@@ -65,6 +65,11 @@ form button:hover {
   align-items: center;
 }
 
+.shopping-list {
+  min-width: 30%;
+  list-style: none;
+}
+
 .shop {
   margin: 0.5rem;
   background: white;
