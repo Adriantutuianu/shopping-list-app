@@ -56,7 +56,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">Shopping list :</header>
+      <header>
+        {" "}
+        <h1>Shopping List :</h1>
+      </header>{" "}
       <main className="content">
         <Form
           inputText={inputText}
