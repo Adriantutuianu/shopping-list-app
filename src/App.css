@@ -85,6 +85,10 @@ form button:hover {
   transition: all 1s ease;
 }
 
+.filter-shop {
+  padding: 1rem;
+}
+
 .shop li {
   flex: 2;
 }
@@ -105,6 +109,11 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
 }
 
 .completed {
@@ -135,7 +144,7 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
+  color: black;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
