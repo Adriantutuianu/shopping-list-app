@@ -1,4 +1,5 @@
 import React from "react";
+import { Input } from "antd";
 
 const Shopping = ({ text, shop, shopping, setShopping }) => {
   // Events
@@ -22,6 +23,7 @@ const Shopping = ({ text, shop, shopping, setShopping }) => {
 
   return (
     <div className="shop">
+      <Input placeholder="Quantity" />
       <li className={`shop-item ${shop.completed ? "completed" : ""}`}>
         {text}
       </li>
