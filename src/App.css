@@ -46,6 +46,7 @@ form button {
   font-size: 2rem;
   border: 1px solid rgb(41, 1, 1);
   background: rgb(226, 226, 221);
+  border-radius: 20px;
 }
 form button {
   color: rgb(160, 207, 30);
@@ -75,6 +76,7 @@ form button:hover {
 }
 
 .shop {
+  border-radius: 20px;
   margin: 0.5rem;
   background: rgb(226, 226, 221);
   font-size: 1.5rem;
@@ -89,6 +91,7 @@ form button:hover {
 .filter-shop {
   padding: 1rem;
   border: 1px solid rgb(41, 1, 1);
+  border-radius: 20px;
 }
 
 .shop li {
@@ -103,6 +106,7 @@ form button:hover {
   background: rgb(160, 207, 30);
   margin: 5px;
   border: 2px solid rgb(41, 1, 1);
+  border-radius: 25px;
 }
 
 .trash-btn,
@@ -113,6 +117,9 @@ form button:hover {
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  border-radius: 20px;
+
+  margin: 3px 3px;
 }
 .complete-btn {
   background: rgb(163, 161, 37);
@@ -145,15 +152,15 @@ select {
   appearance: none;
   outline: 0;
   box-shadow: none;
-  /* border: 0 !important; */
   background-image: none;
 }
 
 /* Custom Select */
 .select {
-  margin: 1rem;
+  margin: 3px;
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
 select {
   color: black;
@@ -168,7 +175,9 @@ select {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem;
+  margin: 3px;
+  border-radius: 20px;
+  padding: 10px;
   background: rgb(160, 207, 30);
   cursor: pointer;
   pointer-events: none;

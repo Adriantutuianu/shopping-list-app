@@ -26,19 +26,21 @@ const Form = ({
 
   return (
     <form>
-      <input
-        value={inputText}
-        onChange={inputTextHandler}
-        type="text"
-        className="shopping-input"
-      />
-      <button
-        onClick={submitShoppingHandler}
-        className="shopping-button"
-        type="submit"
-      >
-        <i className="fas fa-plus-square"></i>
-      </button>
+      <div>
+        <input
+          value={inputText}
+          onChange={inputTextHandler}
+          type="text"
+          className="shopping-input"
+        />
+        <button
+          onClick={submitShoppingHandler}
+          className="shopping-button"
+          type="submit"
+        >
+          <i className="fas fa-plus-square"></i>
+        </button>
+      </div>
       <div className="select">
         <select
           onChange={statusHandler}
