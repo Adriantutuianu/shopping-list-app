@@ -97,10 +97,12 @@ form button:hover {
 
 .input-quantity {
   display: flex;
+  text-align: center;
   width: 55px;
   height: 40px;
   background: rgb(160, 207, 30);
   margin: 5px;
+  border: 2px solid rgb(41, 1, 1);
 }
 
 .trash-btn,
