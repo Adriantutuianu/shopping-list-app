@@ -23,7 +23,7 @@ const Shopping = ({ text, shop, shopping, setShopping }) => {
 
   return (
     <div className="shop">
-      <Input placeholder="Quantity" />
+      <Input placeholder="Quantity" className="input-quantity" />
       <li className={`shop-item ${shop.completed ? "completed" : ""}`}>
         {text}
       </li>

@@ -95,6 +95,14 @@ form button:hover {
   flex: 2;
 }
 
+.input-quantity {
+  display: flex;
+  width: 55px;
+  height: 40px;
+  background: rgb(160, 207, 30);
+  margin: 5px;
+}
+
 .trash-btn,
 .complete-btn {
   background: rgb(160, 207, 30);
