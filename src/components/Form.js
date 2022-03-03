@@ -26,7 +26,7 @@ const Form = ({
 
   return (
     <form>
-      <div>
+      <div className="add-shopping">
         <input
           value={inputText}
           onChange={inputTextHandler}
