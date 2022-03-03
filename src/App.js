@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
+import Clock from "./components/Clock";
 
 function App() {
   //state
@@ -73,6 +74,7 @@ function App() {
           setShopping={setShopping}
           shopping={shopping}
         />
+        <Clock />
       </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
