@@ -17,32 +17,32 @@ function App() {
 
   //useEffect
   useEffect(() => {
+    //functions and events
+    const filterHandler = () => {
+      switch (status) {
+        case "completed":
+          setFilteredShopping(
+            shopping.filter((shop) => shop.completed === true)
+          );
+          break;
+        case "uncompleted":
+          setFilteredShopping(
+            shopping.filter((shop) => shop.completed === false)
+          );
+
+          break;
+        default:
+          setFilteredShopping(shopping);
+      }
+    };
     filterHandler();
+    const saveLocalShopping = () => {
+      localStorage.setItem("shopping", JSON.stringify(shopping));
+    };
     saveLocalShopping();
   }, [shopping, status]);
 
-  //functions and events
-  const filterHandler = () => {
-    switch (status) {
-      case "completed":
-        setFilteredShopping(shopping.filter((shop) => shop.completed === true));
-        break;
-      case "uncompleted":
-        setFilteredShopping(
-          shopping.filter((shop) => shop.completed === false)
-        );
-
-        break;
-      default:
-        setFilteredShopping(shopping);
-    }
-  };
-
   //save to local storage
-
-  const saveLocalShopping = () => {
-    localStorage.setItem("shopping", JSON.stringify(shopping));
-  };
 
   const getLocalShopping = () => {
     if (localStorage.getItem("shopping") === null) {
