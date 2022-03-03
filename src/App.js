@@ -10,6 +10,7 @@ function App() {
   const [shopping, setShopping] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredShopping, setFilteredShopping] = useState([]);
+  const [date, setDate] = useState(new Date());
 
   //run once when the app start
   useEffect(() => {
@@ -74,7 +75,7 @@ function App() {
           setShopping={setShopping}
           shopping={shopping}
         />
-        <Clock />
+        <Clock date={date} setDate={setDate} />
       </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
