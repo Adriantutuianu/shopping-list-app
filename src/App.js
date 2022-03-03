@@ -38,6 +38,7 @@ function App() {
       }
     };
     filterHandler();
+
     const saveLocalShopping = () => {
       localStorage.setItem("shopping", JSON.stringify(shopping));
     };
@@ -46,7 +47,7 @@ function App() {
 
   //save to local storage
 
-  const getLocalShopping = () => {
+  function getLocalShopping() {
     if (localStorage.getItem("shopping") === null) {
       localStorage.setItem("shopping", JSON.stringify([]));
     } else {
@@ -54,7 +55,7 @@ function App() {
 
       setShopping(shopLocal);
     }
-  };
+  }
 
   return (
     <div className="App">

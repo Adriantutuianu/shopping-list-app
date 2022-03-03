@@ -183,3 +183,12 @@ select {
   pointer-events: none;
   border: 1px solid rgb(41, 1, 1);
 }
+
+.clock-live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: rgb(160, 207, 30);
+  font-size: large;
+}

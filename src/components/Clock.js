@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function Clock({ date, setDate }) {
   function refreshClock() {
@@ -11,6 +11,6 @@ function Clock({ date, setDate }) {
       clearInterval(timerId);
     };
   }, []);
-  return <span>{date.toLocaleTimeString()}</span>;
+  return <span className="clock-live">{date.toLocaleTimeString()}</span>;
 }
 export default Clock;
