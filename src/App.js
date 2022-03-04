@@ -3,7 +3,7 @@ import "./App.css";
 import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
-import { Drawer, Button, Space, Radio } from "antd";
+import { Drawer, Button } from "antd";
 
 function App() {
   //state
@@ -13,14 +13,9 @@ function App() {
   const [filteredShopping, setFilteredShopping] = useState([]);
   const [date, setDate] = useState(new Date());
   const [visible, setVisible] = useState(false);
-  const [placement, setPlacement] = useState("right");
 
   const showDrawer = () => {
     setVisible(true);
-  };
-
-  const onChange = (e) => {
-    setPlacement(e.target.value);
   };
 
   const onClose = () => {
@@ -87,15 +82,14 @@ function App() {
           setStatus={setStatus}
         />
         <>
-          <Space>
-            <Radio.Group value={placement} onChange={onChange}></Radio.Group>
-            <Button type="primary" onClick={showDrawer}>
-              Notes
-            </Button>
-          </Space>
+          <Button type="primary" onClick={showDrawer}>
+            Notes
+          </Button>
+
           <Drawer
             title="Notes:"
-            placement={placement}
+            style={{ textAlign: "center" }}
+            placement="left"
             width={500}
             onClose={onClose}
             visible={visible}
