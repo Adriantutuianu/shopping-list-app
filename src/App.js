@@ -3,7 +3,7 @@ import "./App.css";
 import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
-import { Drawer, Button } from "antd";
+import Notes from "./components/Notes";
 
 function App() {
   //state
@@ -12,15 +12,6 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredShopping, setFilteredShopping] = useState([]);
   const [date, setDate] = useState(new Date());
-  const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
 
   //run once when the app start
   useEffect(() => {
@@ -81,22 +72,7 @@ function App() {
           setInputText={setInputText}
           setStatus={setStatus}
         />
-        <>
-          <Button type="primary" onClick={showDrawer}>
-            Notes
-          </Button>
 
-          <Drawer
-            title="Notes:"
-            style={{ textAlign: "center" }}
-            placement="left"
-            width={500}
-            onClose={onClose}
-            visible={visible}
-          >
-            <p>Some contents...</p>
-          </Drawer>
-        </>
         <ShoppingList
           filteredShopping={filteredShopping}
           setShopping={setShopping}
