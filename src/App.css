@@ -184,11 +184,16 @@ select {
   border: 1px solid rgb(41, 1, 1);
 }
 
-.clock-live {
+.clock {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(41, 1, 1);
   padding: 30px;
+}
+
+.clock-live {
+  margin-left: 10px;
   color: rgb(160, 207, 30);
   font-size: large;
 }

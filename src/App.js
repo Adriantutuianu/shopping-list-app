@@ -76,7 +76,10 @@ function App() {
           setShopping={setShopping}
           shopping={shopping}
         />
-        <Clock date={date} setDate={setDate} />
+        <div className="clock">
+          <h3>Time :</h3>
+          <Clock date={date} setDate={setDate} />
+        </div>
       </main>
       <footer>
         @{new Date().getFullYear()} - All rights reserved @Adrian Tut.
