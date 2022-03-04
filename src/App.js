@@ -73,6 +73,7 @@ function App() {
           setStatus={setStatus}
         />
         <Notes />
+
         <ShoppingList
           filteredShopping={filteredShopping}
           setShopping={setShopping}

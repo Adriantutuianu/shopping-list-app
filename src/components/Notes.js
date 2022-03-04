@@ -23,7 +23,7 @@ const Notes = () => {
       <Drawer
         title="Notes:"
         style={{ textAlign: "center" }}
-        placement="left"
+        placement="right"
         width={500}
         onClose={onClose}
         visible={visible}
