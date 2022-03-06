@@ -199,3 +199,10 @@ select {
   color: rgb(160, 207, 30);
   font-size: large;
 }
+
+.notes-drawer {
+  margin: 10px;
+  background: rgb(160, 207, 30);
+  color: rgb(41, 1, 1);
+  border-radius: 20px;
+}

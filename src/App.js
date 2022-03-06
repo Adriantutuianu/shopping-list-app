@@ -67,9 +67,6 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Shopping List :</h1>
-      </header>{" "}
-      <main className="content">
         <>
           <Switch disabled={disabled} defaultChecked />
           <br />
@@ -77,6 +74,10 @@ function App() {
             Toggle disabled
           </Button>
         </>
+        <h1>Shopping List :</h1>
+      </header>
+      <main className="content">
+        <Notes />
         <Form
           inputText={inputText}
           shopping={shopping}
@@ -84,7 +85,6 @@ function App() {
           setInputText={setInputText}
           setStatus={setStatus}
         />
-        <Notes />
 
         <ShoppingList
           filteredShopping={filteredShopping}
