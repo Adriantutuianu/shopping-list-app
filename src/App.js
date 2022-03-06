@@ -4,7 +4,7 @@ import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
 import Notes from "./components/Notes";
-import { Switch } from "antd";
+import { Switch, Button } from "antd";
 
 function App() {
   //state
@@ -13,6 +13,7 @@ function App() {
   const [status, setStatus] = useState("all");
   const [filteredShopping, setFilteredShopping] = useState([]);
   const [date, setDate] = useState(new Date());
+  const [disabled, setDisabled] = useState(true);
 
   //run once when the app start
   useEffect(() => {
@@ -47,9 +48,9 @@ function App() {
     saveLocalShopping();
   }, [shopping, status]);
 
-  function onChange(checked) {
-    console.log(`switch to ${checked}`);
-  }
+  const toggle = () => {
+    setDisabled(!disabled);
+  };
 
   //save to local storage
 
@@ -69,8 +70,13 @@ function App() {
         <h1>Shopping List :</h1>
       </header>{" "}
       <main className="content">
-        <Switch defaultChecked onChange={onChange} />
-
+        <>
+          <Switch disabled={disabled} defaultChecked />
+          <br />
+          <Button type="primary" onClick={toggle}>
+            Toggle disabled
+          </Button>
+        </>
         <Form
           inputText={inputText}
           shopping={shopping}
