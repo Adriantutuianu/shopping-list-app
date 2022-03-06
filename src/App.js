@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
 import Notes from "./components/Notes";
+import { Switch } from "antd";
 
 function App() {
   //state
@@ -46,6 +47,10 @@ function App() {
     saveLocalShopping();
   }, [shopping, status]);
 
+  function onChange(checked) {
+    console.log(`switch to ${checked}`);
+  }
+
   //save to local storage
 
   function getLocalShopping() {
@@ -61,10 +66,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        {" "}
         <h1>Shopping List :</h1>
       </header>{" "}
       <main className="content">
+        <Switch defaultChecked onChange={onChange} />
+
         <Form
           inputText={inputText}
           shopping={shopping}
