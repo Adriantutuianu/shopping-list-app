@@ -16,7 +16,7 @@ const Notes = () => {
 
   return (
     <>
-      <Button type="primary" onClick={showDrawer}>
+      <Button className="notes-drawer" type="primary" onClick={showDrawer}>
         Notes
       </Button>
 

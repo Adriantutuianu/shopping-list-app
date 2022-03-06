@@ -206,3 +206,13 @@ select {
   color: rgb(41, 1, 1);
   border-radius: 20px;
 }
+
+.ant-drawer-title {
+  color: rgb(41, 1, 1);
+
+  font-weight: bold;
+}
+
+.ant-drawer-body p {
+  color: black;
+}
