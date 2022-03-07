@@ -30,7 +30,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 40px;
   font-weight: 500;
   border-top: 3px solid rgb(41, 1, 1);
   color: rgb(160, 207, 30);
