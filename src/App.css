@@ -190,8 +190,12 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(41, 1, 1);
   padding: 30px;
+}
+
+.clock h3 {
+  margin-bottom: 0;
+  color: rgb(41, 1, 1);
 }
 
 .clock-live {
