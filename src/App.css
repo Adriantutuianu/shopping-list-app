@@ -96,6 +96,11 @@ form button:hover {
   border-radius: 5px;
 }
 
+.shopping-input {
+  color: black;
+  caret-color: rgb(163, 161, 37);
+}
+
 .shop li {
   flex: 2;
 }
