@@ -107,8 +107,12 @@ form button:hover {
   width: 55px;
   height: 40px;
   margin: 5px;
-  border: 2px solid rgb(41, 1, 1);
+  border: 1px solid rgb(41, 1, 1);
   border-radius: 5px;
+}
+.input-quantity::placeholder {
+  font-size: 12px;
+  color: black;
 }
 
 .trash-btn,
