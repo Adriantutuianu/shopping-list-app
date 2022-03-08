@@ -7,6 +7,10 @@
     font-size: 1rem;
   }
 
+  .shop {
+    font-size: 1rem;
+  }
+
   .filter-shop {
     padding: 0.7rem;
   }
@@ -18,7 +22,7 @@
 
   .complete-btn,
   .trash-btn {
-    padding: 0.2rem;
+    padding: 0 0.2rem;
   }
 }
 
