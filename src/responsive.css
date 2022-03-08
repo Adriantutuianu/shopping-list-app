@@ -21,3 +21,17 @@
     padding: 0.2rem;
   }
 }
+
+@media only screen and (max-width: 481px) {
+  form {
+    flex-wrap: wrap;
+  }
+  .add-shopping {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .shopping-input {
+    width: 80%;
+  }
+}
