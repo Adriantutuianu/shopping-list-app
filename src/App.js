@@ -63,12 +63,11 @@ function App() {
   return (
     <div className="App">
       <header>
+        <Info />
+        <h1>Shopping List:</h1>
         <Switch defaultChecked />
-
-        <h1>Shopping List :</h1>
       </header>
       <main className="content">
-        <Info />
         <Form
           inputText={inputText}
           shopping={shopping}

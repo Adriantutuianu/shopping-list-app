@@ -19,7 +19,7 @@ const Info = () => {
   return (
     <>
       <Button className="info-drawer" type="primary" onClick={showDrawer}>
-        Info:
+        Info
       </Button>
 
       <Drawer
