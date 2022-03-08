@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-import { Drawer, Button } from "antd";
+import { Drawer, Button, Typography } from "antd";
 
-const Notes = () => {
+const Info = () => {
   const [visible, setVisible] = useState(false);
+
+  const { Title } = Typography;
 
   const showDrawer = () => {
     setVisible(true);
@@ -16,8 +18,8 @@ const Notes = () => {
 
   return (
     <>
-      <Button className="notes-drawer" type="primary" onClick={showDrawer}>
-        Notes
+      <Button className="info-drawer" type="primary" onClick={showDrawer}>
+        Info:
       </Button>
 
       <Drawer
@@ -28,10 +30,12 @@ const Notes = () => {
         onClose={onClose}
         visible={visible}
       >
-        <p>Some contents...</p>
+        <Title level={5}>Description</Title>
+        <Title level={5}>Instructions</Title>
+        <Title level={5}>Credits</Title>
       </Drawer>
     </>
   );
 };
 
-export default Notes;
+export default Info;

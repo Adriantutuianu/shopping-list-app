@@ -207,13 +207,16 @@ select {
   font-size: large;
 }
 
-.notes-drawer {
+.info-drawer {
   margin: 10px;
   background: var(--primary-color);
-
   color: var(--secondary-color);
   border-radius: 5px;
   border: 2px solid var(--secondary-color);
+}
+
+.info-drawer:hover {
+  background-color: var(--secondary-color);
 }
 
 .ant-drawer-title {

@@ -4,7 +4,7 @@ import "./responsive.css";
 import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
-import Notes from "./components/Notes";
+import Info from "./components/Info";
 import { Switch } from "antd";
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
         <h1>Shopping List :</h1>
       </header>
       <main className="content">
-        <Notes />
+        <Info />
         <Form
           inputText={inputText}
           shopping={shopping}
