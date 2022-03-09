@@ -31,13 +31,15 @@ const Info = () => {
         visible={visible}
       >
         <Title level={5}>Description</Title>
-        <Paragraph>Description content</Paragraph>
+        <Paragraph>
+          This is a single page created in React which includes a shopping list.
+        </Paragraph>
         <Title level={5}>Instructions</Title>
-        <Paragraph>Instruction content 1</Paragraph>
-        <Paragraph>Instruction content 2</Paragraph>
-        <Paragraph>Instruction content 3</Paragraph>
+        <Paragraph>You can add items and quantity in your list.</Paragraph>
+        <Paragraph>You can tick them as completed.</Paragraph>
+        <Paragraph>You can delete items selected.</Paragraph>
         <Title level={5}>Credits</Title>
-        <Paragraph>Credits content</Paragraph>
+        <Paragraph>@2022 - All rights reserved @Adrian Tut.</Paragraph>
       </Drawer>
     </>
   );
