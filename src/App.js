@@ -5,7 +5,6 @@ import Form from "./components/Form";
 import ShoppingList from "./components/ShoppingList";
 import Clock from "./components/Clock";
 import Info from "./components/Info";
-import { Switch } from "antd";
 
 function App() {
   //state
@@ -65,7 +64,6 @@ function App() {
       <header>
         <Info />
         <h1>Shopping List:</h1>
-        <Switch defaultChecked />
       </header>
       <main className="content">
         <Form
