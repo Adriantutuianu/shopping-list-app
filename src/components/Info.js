@@ -29,7 +29,6 @@ const Info = () => {
 
       <Drawer
         title="Shopping List App"
-        style={{ textAlign: "center" }}
         headerStyle={{ borderBottom: " 1px solid var(--secondary-color)" }}
         placement="right"
         width={500}
@@ -69,7 +68,7 @@ const Info = () => {
           }}
           level={5}
         >
-          View credits?
+          {!switchValue ? "View credits?" : "Hide credits?"}
           <Switch
             onChange={onChangeSwitch}
             style={{ marginLeft: "10px" }}
