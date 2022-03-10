@@ -11,11 +11,12 @@ header {
   color: var(--primary-color);
   min-height: 15vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 header h1 {
+  margin-left: 20px;
   margin-bottom: 0;
 }
 footer {
