@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-import { Drawer, Button, Typography } from "antd";
+import { Drawer, Button, Typography, Switch } from "antd";
 
 const Info = () => {
   const [visible, setVisible] = useState(false);
+  const [switchValue, setSwitchValue] = useState(false);
 
   const { Title, Paragraph } = Typography;
 
@@ -15,6 +16,10 @@ const Info = () => {
   const onClose = () => {
     setVisible(false);
   };
+
+  function onChangeSwitch(checked) {
+    setSwitchValue(checked);
+  }
 
   return (
     <>
@@ -59,18 +64,20 @@ const Info = () => {
           style={{
             color: "var(--secondary-color)",
             borderBottom: " 1px solid var(--secondary-color)",
+            padding: "5px",
           }}
           level={5}
         >
-          Credits
+          View credits?
+          <Switch
+            onChange={onChangeSwitch}
+            style={{ marginLeft: "10px" }}
+            defaultChecked
+          />
         </Title>
-        <Paragraph
-          style={{
-            borderBottom: " 1px solid var(--secondary-color)",
-          }}
-        >
-          @2022 - All rights reserved @Adrian Tut.
-        </Paragraph>
+        {switchValue && (
+          <Paragraph>@2022 - All rights reserved @Adrian Tut.</Paragraph>
+        )}
       </Drawer>
     </>
   );
