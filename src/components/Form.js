@@ -1,4 +1,5 @@
 import React from "react";
+import { message } from "antd";
 
 const Form = ({
   inputText,
@@ -13,11 +14,15 @@ const Form = ({
 
   const submitShoppingHandler = (e) => {
     e.preventDefault();
-    setShopping([
-      ...shopping,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
-    ]);
-    setInputText("");
+    if (inputText.length > 0) {
+      setShopping([
+        ...shopping,
+        { text: inputText, completed: false, id: Math.random() * 1000 },
+      ]);
+      setInputText("");
+    } else {
+      message.error("Please type more characters");
+    }
   };
 
   const statusHandler = (e) => {
