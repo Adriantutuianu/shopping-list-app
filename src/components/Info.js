@@ -30,6 +30,7 @@ const Info = () => {
       <Drawer
         title="Shopping List App"
         style={{ textAlign: "center" }}
+        headerStyle={{ borderBottom: " 1px solid var(--secondary-color)" }}
         placement="right"
         width={500}
         onClose={onClose}
@@ -38,7 +39,6 @@ const Info = () => {
         <Title
           style={{
             color: "var(--secondary-color)",
-            borderTop: " 1px solid var(--secondary-color)",
             borderBottom: " 1px solid var(--secondary-color)",
           }}
           level={5}
@@ -72,7 +72,7 @@ const Info = () => {
           <Switch
             onChange={onChangeSwitch}
             style={{ marginLeft: "10px" }}
-            defaultChecked
+            defaultChecked={switchValue}
           />
         </Title>
         {switchValue && (
