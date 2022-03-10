@@ -35,6 +35,7 @@ const Info = () => {
         width={500}
         onClose={onClose}
         visible={visible}
+        keyboard={false}
       >
         <Title
           style={{
