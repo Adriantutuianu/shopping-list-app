@@ -79,6 +79,7 @@ function App() {
           setShopping={setShopping}
           shopping={shopping}
         />
+
         <div className="clock">
           <h3>Time :</h3>
           <Clock date={date} setDate={setDate} />
