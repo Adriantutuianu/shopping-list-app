@@ -10,7 +10,7 @@ function Clock({ date, setDate }) {
     return function cleanup() {
       clearInterval(timerId);
     };
-  }, []);
+  }, [refreshClock]);
   return <span className="clock-live">{date.toLocaleTimeString()}</span>;
 }
 export default Clock;
